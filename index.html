@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Portafolio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Puedes enviarme un correo!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Asunto:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modalId = document.getElementById('modalId');
+
+        modalId.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute('data-bs-whatever');
+
+            // Use above variables to manipulate the DOM
+        });
+    </script>
+
+
+    <header>
+        <nav id="nav" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicio">Inico</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#about">Sobre Mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hobbies">Hobbies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formacion">Formaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" id="principal">
+        <main>
+            <div id="inicio" class="row justify-content-center align-items-center g-2">
+                <div class="col-8 coltxt">
+                    <h2>Hola soy Wanda, mucho gusto!</h2>
+                    <p>Soy una desarrolladora frontend en pleno desarrollo, apasionada por el diseño y el modelado web.
+                        Me encanta crear interfaces atractivas y funcionales que mejoren la experiencia del usuario. Con
+                        un ojo para el detalle y una mente creativa, me esfuerzo por combinar estética y funcionalidad
+                        en cada proyecto.</p>
+                    <a href="https://www.instagram.com/wanda_ma97?igsh=MTU2YzNwNTFnc3pvbw=="><svg width="30"
+                            enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                                <path
+                                    d="M505,257c0,35.8,0.1,71.6,0,107.5c-0.2,52-24.4,90.5-67.6,117.7C412.1,498,384,505,354.2,505   c-65.2,0-130.3,0.3-195.5-0.1c-45.3-0.3-84.3-16.3-115.2-49.9c-19.1-20.8-30.5-45.3-33.8-73.6c-0.7-6-0.8-11.9-0.8-17.9   c0-71.3-0.1-142.6,0-213.9C9.2,97.5,33.4,59,76.6,31.8C102.1,15.9,130.3,9,160.3,9c65,0,130-0.3,195,0.1   c45.5,0.3,84.6,16.4,115.5,50.2c18.9,20.7,30.2,45.2,33.4,73.2c1.3,11,0.7,22,0.8,32.9C505.1,196,505,226.5,505,257z M46,257   c0,36.7-0.1,73.3,0,110c0.1,25.2,9.3,46.9,26.5,64.9c23.1,24.1,51.9,35.8,85,36c65.7,0.4,131.3,0.1,197,0.1   c21.2,0,41.4-4.6,59.8-15.2c34.4-19.7,53.8-48.7,53.8-89.3c0-72.2,0-144.3,0-216.5c0-25-9.1-46.6-26.2-64.5   c-22.9-24.2-51.8-36.1-84.8-36.3C290.7,45.7,224.4,46,158,46c-20.7,0-40.3,4.9-58.3,15.1C65.4,80.9,45.9,109.9,46,150.5   C46,186,46,221.5,46,257z"
+                                    fill="#ffffff" />
+                                <path
+                                    d="M257.3,363c-64.6,0-116.4-51.6-116.3-116c0.1-62.7,52.6-114.1,116.7-114c64.4,0,116.4,51.7,116.3,115.5   C373.9,311.7,321.6,363,257.3,363z M257.3,326c43.9,0,79.7-34.9,79.7-77.8c0-43.1-35.5-78.2-79.3-78.2c-43.9,0-79.7,34.9-79.7,77.8   C178,290.9,213.5,326,257.3,326z"
+                                    fill="#ffffff" />
+                                <path
+                                    d="M363,123.6c0-14.2,10.9-25.6,24.5-25.6c13.6,0,24.5,11.5,24.5,25.6c0,13.9-10.9,25.3-24.3,25.4   C374.1,149.1,363,137.8,363,123.6z"
+                                    fill="#ffffff" />
+                            </g>
+                        </svg></a>
+                    <a href="https://github.com/WandaMA97"><svg viewBox="0 0 256 250" width="30" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                            <path
+                                d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/wanda-martínez-a-0127362ab/"><svg fill="none" height="30"
+                            viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.0142 0.965088H2.51824C1.92097 0.965088 1.34816 1.20235 0.925831 1.62468C0.503499 2.04702 0.266235 2.61982 0.266235 3.21709V14.7131C0.266235 15.3104 0.503499 15.8832 0.925831 16.3055C1.34816 16.7278 1.92097 16.9651 2.51824 16.9651H14.0142C14.6115 16.9651 15.1843 16.7278 15.6066 16.3055C16.029 15.8832 16.2662 15.3104 16.2662 14.7131V3.21709C16.2662 2.61982 16.029 2.04702 15.6066 1.62468C15.1843 1.20235 14.6115 0.965088 14.0142 0.965088ZM5.60024 13.7491C5.60024 13.7891 5.57324 13.8491 5.52024 13.9301C5.44024 13.9841 5.37924 14.0101 5.33924 14.0101H3.48924C3.44924 14.0101 3.38924 13.9841 3.30924 13.9301C3.25524 13.8501 3.22824 13.7901 3.22824 13.7491V7.25509C3.22824 7.21509 3.25524 7.15509 3.30824 7.07509C3.38824 7.02109 3.44824 6.99409 3.48924 6.99409H5.33924C5.37924 6.99409 5.43924 7.02109 5.51924 7.07409C5.57324 7.15409 5.60024 7.21409 5.60024 7.25509V13.7491ZM5.29924 5.88809C5.18426 6.00567 5.04642 6.09845 4.89421 6.16071C4.742 6.22297 4.57865 6.25339 4.41424 6.25009C4.06524 6.25009 3.77124 6.13009 3.52924 5.88809C3.41161 5.77315 3.31879 5.63532 3.25653 5.4831C3.19427 5.33088 3.16388 5.16751 3.16724 5.00309C3.16724 4.66809 3.28824 4.38009 3.52924 4.13909C3.64292 4.01844 3.78007 3.92231 3.93226 3.85661C4.08445 3.79091 4.24847 3.75701 4.41424 3.75701C4.58 3.75701 4.74402 3.79091 4.89621 3.85661C5.0484 3.92231 5.18555 4.01844 5.29924 4.13909C5.53924 4.37909 5.66024 4.66909 5.66024 5.00309C5.66024 5.35209 5.54024 5.64709 5.29924 5.88809ZM13.4612 13.7491C13.4609 13.7831 13.4537 13.8167 13.4399 13.8478C13.4262 13.879 13.4062 13.907 13.3812 13.9301C13.3581 13.955 13.3301 13.975 13.299 13.9888C13.2679 14.0025 13.2343 14.0098 13.2002 14.0101H11.3102C11.2702 14.0101 11.2102 13.9841 11.1302 13.9301C11.0762 13.8501 11.0492 13.7901 11.0492 13.7491V9.78909C11.0492 9.45309 10.9892 9.19209 10.8682 9.00409C10.7202 8.84409 10.4792 8.76409 10.1442 8.76409C9.71524 8.76409 9.40724 8.89009 9.21924 9.14509C9.04524 9.40009 8.95824 9.76209 8.95824 10.2311V13.7491C8.95792 13.7831 8.95066 13.8167 8.93691 13.8478C8.92315 13.879 8.90319 13.907 8.87824 13.9301C8.85498 13.9552 8.82683 13.9752 8.79553 13.989C8.76423 14.0027 8.73043 14.0099 8.69624 14.0101H6.84624C6.80624 14.0101 6.74623 13.9841 6.66623 13.9301C6.61224 13.8501 6.58624 13.7901 6.58624 13.7491V7.25509C6.58624 7.21509 6.61224 7.15509 6.66623 7.07509C6.74623 7.02109 6.80624 6.99409 6.84624 6.99409H8.63624C8.69024 6.99409 8.74323 7.00709 8.79624 7.03409C8.82423 7.04809 8.85124 7.09409 8.87724 7.17409V7.27509L8.89723 7.31509V7.47609C9.34023 7.04809 9.95024 6.83309 10.7272 6.83309C11.5982 6.83309 12.2682 7.04109 12.7372 7.45609C13.2202 7.89809 13.4612 8.53609 13.4612 9.36609V13.7491Z"
+                                fill="white" />
+                        </svg></a>
+                    <a href=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 748 748"
+                            style="fill:#ffffff;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <polygon points="680,646 680,0 170,0 170,68 612,68 612,646 		" />
+                                    <path d="M68,109.14v631.72c0,3.943,3.128,7.14,7.004,7.14h495.958c3.91,0,7.038-3.162,7.038-7.14V109.14
+                               c0-3.944-3.128-7.14-7.004-7.14H75.004C71.128,102,68,105.162,68,109.14z M136,204h374v34H136V204z M136,306h374v34H136V306z
+                                M136,408h374v34H136V408z M136,510h374v34H136V510z M136,612h238v34H136V612z" />
+                                </g>
+                            </g>
+                        </svg></a>
+                </div>
+                <div class="col justify-content-center align-items-center">
+                    <img id="foto" src="img/foto.png">
+                </div>
+            </div>
+            <div class="row" id="cuerpo">
+                <div id="about" class="row justify-content-center align-items-center g-2">
+                    <h2 style="color: white;">Sobre Mi</h2>
+                    <p>¡Hola! Soy Wanda Martinez, estudiante de informática con una fuerte pasión por el desarrollo web,
+                        especializándome en el área de frontend. Me dedico a crear experiencias web que no solo sean
+                        funcionales, sino también intuitivas y agradables para los usuarios.</p>
+                    <p> Mi enfoque está en desarrollar interfaces de usuario atractivas y eficientes, utilizando
+                        tecnologías como HTML, CSS, y JavaScript. Estoy constantemente aprendiendo y explorando nuevas
+                        herramientas y técnicas para mejorar mis habilidades y mantenerme actualizada con las últimas
+                        tendencias en el mundo del desarrollo web.</p>
+                </div>
+                <div id="skills" class="row  align-items-center g-2">
+                    <h2>Skills</h2>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/css.svg" alt="logo css" />
+                            <div class="card-body">
+                                <h4 class="card-title">Css</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/bootstrap.svg" alt="LogoBootstrap" />
+                            <div class="card-body">
+                                <h4 class="card-title">Bootstrap</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/java.svg" alt="LogoJava" />
+                            <div class="card-body">
+                                <h4 class="card-title">Java</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/javascript.svg" alt="LogoJs" />
+                            <div class="card-body">
+                                <h4 class="card-title">JavaScript</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/csharp.svg" alt="LogoC#" />
+                            <div class="card-body">
+                                <h4 class="card-title">C#</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/python.svg" alt="LogoPython" />
+                            <div class="card-body">
+                                <h4 class="card-title">Python</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/canva.svg" alt="LogoCanva" />
+                            <div class="card-body">
+                                <h4 class="card-title">Canva</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/godaddy.svg" alt="LogoGoDaddy" />
+                            <div class="card-body">
+                                <h4 class="card-title">GoDaddy</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" style="width: 60%;" src="img/Inkscape_Logo.svg.png"
+                                alt="LogoInkscape" />
+                            <div class="card-body">
+                                <h4 class="card-title">Inkscape</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/figma.svg" alt="LogoFigma" />
+                            <div class="card-body">
+                                <h4 class="card-title">Figma</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" style="width: 50%;" src="img/Trello.png"
+                                alt="LogoTrello" />
+                            <div class="card-body">
+                                <h4 class="card-title">Trello</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/github.svg" alt="LogoGithub" />
+                            <div class="card-body">
+                                <h4 class="card-title">Github</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hobbies" class="row justify-content-center align-items-center g-2">
+                    <h2>Hobbies</h2>
+                    <div style="margin-top: 0px;" class="row justify-content-center align-items-center g-2">
+                        <div class="col-2 ">
+                            <div class="card text-start cardZoom">
+                                <img class="imgCard card-img-top" src="img/svg/apple-music.svg" alt="LogoAppleMusic" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Oir musica</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-start cardZoom">
+                                <img class="imgCard card-img-top" src="img/svg/draw.svg" alt="Imagen Representativa" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Dibujo</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-start cardZoom">
+                                <img class="imgCard card-img-top" style="width: 50%;" src="img/svg/paint.svg"
+                                    alt="Imagen Representativa" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Pintura</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-start cardZoom">
+                                <img class="imgCard card-img-top" src="img/svg/scissors.svg"
+                                    alt="Imagen Representativa" />
+                                <div class="card-body">
+                                    <h4 class="card-title">Manualidades</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/color-picker.svg" alt="LogoPython" />
+                            <div class="card-body">
+                                <h4 class="card-title">Diseño</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/portable-console.svg"
+                                alt="Imagen Representativa" />
+                            <div class="card-body">
+                                <h4 class="card-title">Videojuegos</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/netflix.svg" alt="LogoNetflix" />
+                            <div class="card-body">
+                                <h4 class="card-title">Series</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card text-start cardZoom">
+                            <img class="imgCard card-img-top" src="img/svg/crunchyroll.svg" alt="LogoCrunchyroll" />
+                            <div class="card-body">
+                                <h4 class="card-title">Anime</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center g-2">
+                    <h2>Formaciones</h2>
+                    <div id="formacion" class="col-3">
+                        <a href="documents/Sistema eMatricula Nivel de avance.pdf"><img src="img/UCR.jpg" alt="LogoUCR"
+                                class="imgFormacion"></a>
+                        <h3>Univercidad de Costa Rica</h3>
+                        <p>Bachillerato en Informatica Empresarial</p>
+                    </div>
+                    <div id="formacion" class="col-3">
+                        <a
+                            href="https://app.aluracursos.com/user/wandamartineza/fullCertificate/8e90b52629b20ac3a42610db9ecf73b3"><img
+                                src="img/oracle-imagen.jpg" alt="LogoUCR" class="imgFormacion"></a>
+                        <h3>Oracle Next Education</h3>
+                        <p>Especializacion en Frond-End</p>
+                    </div>
+                    <div id="formacion" class="col-3">
+                        <a href="documents/WandaMartínez Arias-NDG Linux Unhatc-certificate.pdf"><img
+                                src="img/cisco.jpg" alt="LogoUCR" class="imgFormacion"></a>
+                        <h3>Cisco Networking Academy</h3>
+                        <p>Partner: NDG Linux Unhatched</p>
+                    </div>
+                </div>
+                <div id="proyectos" class="row align-items-center g-2">
+                    <div class="row justify-content-center align-items-center">
+                        <h2>Proyectos</h2>
+                        <div class="col-5">
+                            <div id="cardProyect" class="card">
+                                <div class="front face">
+                                    <img src="img/WitchesApp.png" class="card-img"
+                                        alt="Index de proyecto Whitches Store">
+                                    <h3>App Whitches Store</h3>
+                                </div>
+                                <div class="back face">
+                                    <h3 class="card-title">App Whitches Store</h3>
+                                    <p class="card-text">Este proyecto es una demo de una app de catálogo para
+                                        una tienda de bisutería con la idea de exhibir los productos y sus precios de
+                                        manera visualmente atractiva, capturando la atención del cliente.</p>
+                                    <div class="card-foot">
+                                        <h6>Aqui puedes ver el proyecto<a
+                                                href="https://wandama97.github.io/AppWebWitchesStoreCR/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512" width="20" fill="currentColor">
+                                                    <path
+                                                        d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48z"
+                                                        fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" />
+                                                    <path
+                                                        d="M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48z"
+                                                        fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" />
+                                                    <path
+                                                        d="M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34M394.67 394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34"
+                                                        fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="32" />
+                                                    <path fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" d="M256 48v416M464 256H48" />
+                                                </svg></a></h6>
+                                        <h6>Aqui puedes ver el proyecto en Github <a
+                                                href="https://github.com/WandaMA97/AppWebWitchesStoreCR"><svg
+                                                    viewBox="0 0 256 250" width="20" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                                    <path
+                                                        d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                                                </svg></a></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-5">
+                            <div id="cardProyect" class="card">
+                                <div class="front face">
+                                    <img src="img/ConvertidorTxT.png" class="card-img" alt="Index de Encriptador">
+                                    <h3>App Encriptador</h3>
+                                </div>
+                                <div class="back face">
+                                    <h3 class="card-title">App Encriptador</h3>
+                                    <p class="card-text">Esta app consiste en un encriptador y desencriptador de texto realizado con html, css y JavaScript</p>
+                                    <div class="card-foot">
+                                        <h6>Aqui puedes ver el proyecto<a href="https://wandama97.github.io/ChallengeOne/
+                                                repository"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512" width="20" fill="currentColor">
+                                                    <path
+                                                        d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48z"
+                                                        fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" />
+                                                    <path
+                                                        d="M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48z"
+                                                        fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" />
+                                                    <path
+                                                        d="M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34M394.67 394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34"
+                                                        fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="32" />
+                                                    <path fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" d="M256 48v416M464 256H48" />
+                                                </svg></a></h6>
+                                        <h6>Aqui puedes ver el proyecto en Github <a
+                                                href="https://github.com/WandaMA97/ChallengeOne"><svg
+                                                    viewBox="0 0 256 250" width="20" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                                    <path
+                                                        d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                                                </svg></a></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-5">
+                            <div id="cardProyect" class="card">
+                                <div class="front face">
+                                    <img src="img/AppHotel.jpeg" class="card-img" alt="Index de proyecto hotel">
+                                    <h3>App Hotel</h3>
+                                </div>
+                                <div class="back face">
+                                    <h3 class="card-title">App Hotel</h3>
+                                    <p class="card-text">El presente proyecto consiste en el desarrollo de un punto de
+                                        venta para un
+                                        hotel ficticio llamado "Hotel Beach". En este proyecto, me desempeñé como
+                                        diseñadora y programadora front-end de la aplicación.</p>
+                                    <div class="card-foot">
+                                        <p>Aqui puedes ver el proyecto en Github <a
+                                                href="https://github.com/WandaMA97/AppHotelBeach"><svg
+                                                    viewBox="0 0 256 250" width="30" fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                                    <path
+                                                        d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                                                </svg></a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <a id="link" href="#inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" version="1.2" id="home">
+                <path
+                    d="M12 3s-6.186 5.34-9.643 8.232A1.041 1.041 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 .98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3z">
+                </path>
+            </svg></a>
+        <p>Si estás interesado en colaborar o simplemente quieres saber más sobre mi trabajo, no dudes en <a id="link"
+                data-bs-toggle="modal" data-bs-target="#contactModal">contactarme.</a></p>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

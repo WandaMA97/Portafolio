@@ -1,0 +1,168 @@
+/*Css generales*/
+body{
+    background: url(/img/fondo.png);
+    background-position: center;
+    background-size:cover;
+    font-family: "Fraunces", serif;
+}
+.row{
+    margin-top: 1em;
+}
+p{
+    font-size: larger;
+    font-weight: 450;
+}
+
+/*Css nav*/
+#nav{
+    overflow: hidden;
+    background: linear-gradient( #ffffffd1 5%,#01010100);
+    padding: 1em;
+}
+#nav a{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#nav a:hover{
+    font-weight: bolder;
+    transform: scale(1.05);
+    color: rgb(91, 12, 106);
+}
+/*Css Cuerpo*/
+#cuerpo{
+    background: linear-gradient(#01010100, #ffffff 6.5%);
+    padding: 1em 2em 1em 2em;
+}
+/*css inicio*/
+.coltxt{
+    padding-left: 4em;
+    color: #ffffff;
+}
+#foto{
+    width: 70%;
+    height: 70%;
+    margin-left: 1em;
+}
+/*css Skills*/
+.card{
+    transition: 0.3s;
+    height: 10em;
+    align-items: center;
+    padding: 0.5em;
+}
+.cardZoom:hover{
+    transform: scale(1.05);
+    box-shadow: 0em 0.2em 0.4em rgba(11, 3, 28, 0.592);
+}
+.imgCard{
+    height: 60%;
+}
+.card-body{
+    text-align: end;
+}
+/*css Formaciones*/
+#formacion{
+    background-color: #c6b4e1a7;
+    border: 0cap;
+    border-radius: 1em;
+    height: 20em;
+    margin: 0em 0.5em;
+    padding: 1em;
+    align-items: center;
+    align-content: center;
+    transition: 0.5s;
+}
+#formacion:hover{
+    background-color: #6d26d7a7;
+    transform: scale(1.05);
+    box-shadow: 0em 0.2em 0.4em rgba(11, 3, 28, 0.592);
+}
+.imgFormacion{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 0.5em;
+}
+/*css Proyectos*/
+#proyectos{
+    margin-bottom: 2em;
+}
+#proyectos .col-5{
+    margin-top: 1em;
+}
+#cardProyect{
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    height: 250px;
+    border: none;
+}
+#cardProyect .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0em 0.2em 0.4em rgba(11, 3, 28, 0.592);
+}
+#cardProyect .front{
+    transform: perspective(600px) rotateY(0deg);
+    padding: 0px;
+}
+#cardProyect .front h3{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    color: rgb(38, 59, 61);
+    background-color: #ffffff5c;
+    backdrop-filter: blur(3px);
+}
+#cardProyect .back{
+    width: 100%;
+    height: 280px;
+    padding: 1em;
+    transform: perspective(600px) rotateY(180deg);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+#cardProyect .back .card-foot{
+    border-top: 1px solid #a3a1a5;
+    padding-top: 0.5em;
+}
+#cardProyect:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+#cardProyect:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/*Css foot*/
+footer{
+    background: linear-gradient(#ffffff, #ffffff08 35%);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    height: 5em;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    align-content: space-evenly;
+}
+#link{
+    fill: white;
+    text-decoration: underline wavy rgb(255, 255, 255) 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 25px;
+}
+#link:hover{
+    color: rgb(91, 12, 106);
+    font-weight: bold;
+    text-decoration: underline wavy rgb(91, 12, 106) 3px;
+    fill: rgb(91, 12, 106) ;
+}
