@@ -109,6 +109,10 @@ nav li {
         border-radius: 10px;
         transition: 0.75s;
         font-weight: bold;
+        text-align: center;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
 
         &:hover {
             color: white;
