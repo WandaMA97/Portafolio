@@ -100,7 +100,7 @@ nav li {
     flex-direction: column;
     justify-content: center;
 
-    button {
+    .button {
         margin: 0.5em 1em;
         height: auto;
         width: 8em;
