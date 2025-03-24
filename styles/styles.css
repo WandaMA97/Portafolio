@@ -63,7 +63,7 @@ nav li {
     background: url('../assets/img/fondo.png');
     height: 110vh;
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 1500px;
     background-position: right top;
     transition: 2.5s;
 
